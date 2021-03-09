@@ -1,0 +1,177 @@
+.header {
+  display: flex;
+  max-height: 30rem;
+  padding: 2rem 5rem;
+  align-items: center;
+  justify-content: space-between;
+  background-origin: border-box;
+  overflow-x: hidden;
+}
+
+.header_main{
+  overflow-x: hidden;
+}
+
+.header_logo {
+  display: flex;
+  user-select: none;
+}
+
+.header_logo > .MuiSvgIcon-root {
+  color: #fd2d7b;
+  display: flex;
+  position: absolute;
+  top: 3.7rem;
+  left: 9.5rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+
+.header_logo > h3 {
+  font-family: "Merriweather", serif;
+  color: white;
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.header_search {
+  background-color: #104134;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 3px;
+  min-width: 30px;
+}
+
+.header_search > input {
+  height: 20px;
+  background: none;
+  outline: none;
+  border-style: none;
+  color: rgb(216, 216, 216);
+  padding: 5px;
+}
+
+.header_search > input::placeholder {
+  color: rgba(189, 189, 189, 0.6);
+  font-weight: bold;
+}
+
+.header_search > .MuiSvgIcon-root {
+  color: #fd2d7b;
+  cursor: pointer;
+}
+
+.header_links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.header_links_name {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.header_links_name > p {
+  padding-left: 2rem;
+  color: rgb(216, 216, 216);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+
+.header_links_name > p:hover{
+    color: #fd2d7b;
+    transition: all .1s ease-in-out 100ms;
+}
+
+.header_links > .MuiSvgIcon-root {
+  color: #fd2d7b;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+hr{
+  background-color: #033519;
+  border-width: 1.4px;
+  border-color: rgb(0, 7, 3);
+  margin-left: 10%;
+  margin-right: 10%;
+  opacity: 5%;
+}
+
+.header_links> .MuiIconButton-root{
+  color: #fd2d7b;
+  bottom: .1rem;
+  margin-left: 1rem;;
+}
+
+.header_hr{
+  width: 50%;
+  min-height: 25px;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+/* Media Query Tablet*/
+@media screen and (max-width: 768px) {
+    .header_logo > .MuiSvgIcon-root {
+      position: relative;
+      left: -1.3rem;
+      top: 0.8rem;
+    }
+    .header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 2rem 0 2rem;
+      overflow-x: hidden;
+    }
+    .header_logo {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .header_right {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column-reverse;
+    }
+    .header_search {
+      margin-top: 1rem;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .header_links_name{
+        width: 100%;
+    }
+    .header_links_name > p{
+        padding-left: 1.8rem !important;
+        justify-content: space-around;
+    }
+    .header_links{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+  }

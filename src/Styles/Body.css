@@ -1,0 +1,114 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.body {
+  display: flex;
+  padding: 5rem 5rem 0 5rem;
+  /* overflow-x: hidden; */
+}
+
+.body_main {
+  /* overflow: hidden; */
+  width: 100%;
+  display: flex;
+  flex: 1 1 50%;
+}
+
+.body_mainLeft{
+  margin-right: auto;
+}
+
+.body_info {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.body_info:nth-child(2) {
+  flex-wrap: wrap;
+}
+
+.body_headline > h1 {
+  font-size: 4rem;
+  font-family: "Merriweather", serif;
+  color: white;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.body_infoGroups {
+  display: flex;
+}
+
+.body_infoGroupSecond {
+  margin-left: 1rem;
+}
+
+.body_infoGroupFirst {
+  display: flex;
+  flex-direction: column;
+}
+
+.body_buttons {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.body_buttons > .MuiButton-root:nth-child(2) {
+  margin-left: 2rem;
+  background-color: #104134;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: .8rem;
+}
+
+.body_buttons > .MuiButton-root:nth-child(1) {
+  background-color: #fd2d7b;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.body_image{
+  display: flex;
+  margin-right: auto;
+}
+
+.body_image > img{
+  object-fit: contain;
+  width: 100%;
+  min-width: 10em;
+  /* background-color: tomato; */
+  margin-left: auto;
+  position: relative;
+  top:5em;
+}
+
+
+
+/* Media Query Tablet */
+@media screen and (max-width: 768px){
+  .body{
+    padding-left: 2rem;
+    overflow-x: hidden;
+  }
+  .body_mainLeft  > *{
+    margin: 50px;
+  }
+  .body_headline > h1{
+    font-size: 2.5rem;
+    line-height: 4.3rem;
+    text-align: center;
+  }
+  .body_infoGroupSecond{
+    margin: 0;
+  }
+  .body_main{
+    margin-bottom: 2rem;
+    margin-left: auto;
+  }
+  .body_image{
+    visibility: hidden;
+  }
+
+}
