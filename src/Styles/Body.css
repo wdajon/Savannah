@@ -12,10 +12,11 @@
   /* overflow: hidden; */
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex: 1 1 50%;
 }
 
-.body_mainLeft{
+.body_mainLeft {
   margin-right: auto;
 }
 
@@ -50,6 +51,11 @@
   flex-direction: column;
 }
 
+.body_infoGroupFirst > .body_infoGroups,
+.body_infoGroupSecond > .body_infoGroups {
+  margin-bottom: 100px;
+}
+
 .body_buttons {
   display: flex;
   margin-bottom: 1rem;
@@ -60,7 +66,7 @@
   background-color: #104134;
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .body_buttons > .MuiButton-root:nth-child(1) {
@@ -69,46 +75,84 @@
   font-family: "Poppins", sans-serif;
 }
 
-.body_image{
+.body_image {
   display: flex;
-  margin-right: auto;
+  min-width: 20vw;
 }
 
-.body_image > img{
+.body_image > img {
   object-fit: contain;
   width: 100%;
-  min-width: 10em;
   /* background-color: tomato; */
   margin-left: auto;
-  position: relative;
-  top:5em;
+  /* position: relative;
+  top: 5em; */
 }
 
-
-
 /* Media Query Tablet */
-@media screen and (max-width: 768px){
-  .body{
-    padding-left: 2rem;
-    overflow-x: hidden;
+@media screen and (max-width: 768px) {
+  .body {
+    padding: 12px 0 0 0;
   }
-  .body_mainLeft  > *{
-    margin: 50px;
+  .body_mainLeft > * {
+    margin-bottom: 50px;
   }
-  .body_headline > h1{
-    font-size: 2.5rem;
+  .body_mainLeft {
+    position: relative;
+  }
+  .body_headline > h1 {
+    font-size: 2.7rem;
     line-height: 4.3rem;
-    text-align: center;
+    text-align: left;
   }
-  .body_infoGroupSecond{
+  .body_infoGroupSecond {
     margin: 0;
   }
-  .body_main{
-    margin-bottom: 2rem;
-    margin-left: auto;
+  .body_main {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
   }
-  .body_image{
-    visibility: hidden;
+  .body_image {
+    width: 25%;
+    position: absolute;
+    right: 12px;
+    bottom: 0;
   }
+}
 
+/* Phones Media Queries */
+@media screen and (max-width: 480px) {
+  .body_headline > h1 {
+    text-align: center;
+  }
+  .body_image {
+    position: static;
+    width: 40vw;
+    margin: 0 0 36px 0;
+    flex-shrink: 1;
+  }
+  .body_mainLeft {
+    display: grid;
+    place-items: center;
+  }
+  .body_headline {
+    margin-bottom: 0;
+  }
+  .body_headline > h1 {
+    font-size: 11vw;
+  }
+  .body_main {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+  .body_info{
+    justify-content: center;
+  }
+  .body_infoGroupSecond{
+    margin-left: 32px;
+  }
 }

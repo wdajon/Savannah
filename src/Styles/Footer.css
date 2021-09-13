@@ -1,73 +1,99 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
-:root{
-    --vpink:#fd2d7b;
-    --vgreen:#104134;
-    --font1: "Poppins", sans-serif;
-    --font2:"Merriweather", serif;
+:root {
+  --vpink: #fd2d7b;
+  --vgreen: #104134;
+  --font1: "Poppins", sans-serif;
+  --font2: "Merriweather", serif;
 }
 
-.footer{
+.footer {
   background-color: white;
   display: flex;
   padding: 4rem 5rem 0 5rem;
   margin-bottom: 2rem;
+  position: relative;
+  justify-content: space-between;
 }
 
-.footer_info{
-    display: flex;
-    flex-direction: column;
-    max-width: 28.6rem;
-    margin-right: auto; 
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  max-width: 28.6rem;
 }
 
-.footer_headline{
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    font-family: var(--font2);
-    color: var(--vgreen);
+.footer_headline {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-family: var(--font2);
+  color: var(--vgreen);
 }
 
-.footer_description{
-    display: flex;
-    flex-direction: column;
+.footer_description {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer_description > p{
-    margin-bottom: 1rem;
-    font-family: var(--font1);
-    color: var(--vgreen);
+.footer_description > p {
+  margin-bottom: 1rem;
+  font-family: var(--font1);
+  color: var(--vgreen);
 }
 
-.footer_description_readMore{
-    color: var(--vpink);
-    cursor: pointer;
+.footer_description_readMore {
+  color: var(--vpink);
+  cursor: pointer;
 }
 
-.footer_contact{
-    display: flex;
+.footer_contact {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+
+.footer_contact > p {
+  color: var(--vgreen);
+  font-family: var(--font1);
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_social > .MuiSvgIcon-root {
+  color: var(--vpink);
+  cursor: pointer;
+}
+.footer_social > .MuiSvgIcon-root:first-child {
+  margin-left: 10px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .footer_contact {
+    margin-top: 10px;
     align-items: center;
-    justify-content: center;
-    margin-top: auto;
-}
-
-.footer_contact > p{
-    color: var(--vgreen);
-    font-family: var(--font1);
-    font-weight: 600;
-    font-size: .8em;
-}
-
-.footer_social{
+    flex-wrap: wrap;
+  }
+  .footer {
     display: flex;
-    
+    flex-wrap: wrap;
+
+    padding: 12px 12px 0 12px;
+  }
+  .footer_headline > h1 {
+    font-size: 6vw;
+  }
+  .footer_description > p {
+    font-size: 3.5vw;
+  }
+  .footer_social {
+    flex-wrap: wrap;
+  }
 }
-
-.footer_social > .MuiSvgIcon-root{
-    color: var(--vpink);
-    padding-left: 20px;
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-
-
